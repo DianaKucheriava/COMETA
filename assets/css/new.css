@@ -1,0 +1,359 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px; 
+}
+
+header {
+    background-color:  #66101F;
+}
+
+section {
+    background-color: #FFFCFF;
+}
+
+.contenedor .nav-main ul{
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contenedor .nav-main li {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 3px solid;
+    border-color: transparent;    
+}
+
+.contenedor .nav-main a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 20px 20px;
+    font-weight: 300;
+
+}
+
+.contenedor .nav-main li:hover {
+    background-color:rgb(57, 171, 111);
+        border-color:rgb(3, 27, 14);
+
+}
+
+.contenedor {
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.contenedor .titulo h1{
+    font-weight: 400;
+    margin-top: 0px;
+    padding-top: 10px; 
+}
+
+.contenedor .instruccion {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.contenedor .instruccion h2 {
+    font-weight: 400;
+}
+
+.contenedor .instruccion p {
+    font-weight: 300;
+}
+
+.resultado, .opciones-contenedor {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+/*.resultado .resultado-row .resultado-contenedor p,
+.resultado .resultado-row .resultado-contenedor input {
+    display: inline-block;
+    margin-right: 20px;
+}*/
+
+.entradas {
+    display: inline-block;
+    margin: auto;
+}
+
+.resultado .resultado-row  .__resultado input[type="number"] {
+    border: 1px solid;
+    border-color: #ccc;
+    border-radius: 3px;
+    width: 400px;
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.resultado .resultado-row  .__resultado input[type="number"]::-webkit-outer-spin-button, 
+.resultado .resultado-row  .__resultado input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.resultado .resultado-row .__resultado {
+    margin-bottom: 20px;
+    margin-top: 10px; 
+}
+
+.resultado .resultado-row .resultado-contenedor .__resultado p {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+
+/*Tipos de proyecto*/
+
+
+.contenedor .opciones-contenedor .organico,
+.contenedor .opciones-contenedor .moderado,
+.contenedor .opciones-contenedor .embebido {
+    transition: background-color 1.5s linear;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px; 
+    border-color: rgba(0,0,0,.3);
+    border-radius: 5px 5px 5px 5px;
+    background-color: #fff;
+    color: #010d17 ;
+    height: 210px;
+}
+
+.contenedor .opciones-contenedor .organico:hover,
+.contenedor .opciones-contenedor .moderado:hover,
+.contenedor .opciones-contenedor .embebido:hover {
+    cursor: pointer;
+    background-color: rgb(57, 171, 111);
+}
+
+.contenedor .opciones-contenedor .organico .tipo,
+.contenedor .opciones-contenedor .moderado .tipo,
+.contenedor .opciones-contenedor .embebido .tipo {
+    text-align: center;
+}
+
+.contenedor .opciones-contenedor .organico h3,
+.contenedor .opciones-contenedor .moderado h3,
+.contenedor .opciones-contenedor .embebido h3 {
+    font-weight: 400;
+}
+
+.contenedor .opciones-contenedor .organico p,
+.contenedor .opciones-contenedor .moderado p,
+.contenedor .opciones-contenedor .embebido p {
+    font-weight: 300;
+    min-height: 120px;
+}
+/*.contenedor .opciones-contenedor .organico button,
+.contenedor .opciones-contenedor .moderado button,
+.contenedor .opciones-contenedor .embebido button {
+    display: block;
+    margin: auto;
+    background: #fff;
+    border: 1px solid;
+    border-color: rgba(0,0,0,.3);
+    width: 100px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    color: #000;
+}*/
+
+/*Cocomo intermedio*/
+
+.conductores-coste .producto,
+.conductores-coste .plataforma,
+.conductores-coste .personal,
+.conductores-coste .proyecto {
+    /*display: inline-block;*/
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.producto__opt {
+    display: inline-block;
+    margin: 19px;
+}
+
+.producto__opt p, 
+.producto__opt select {
+    display: inline-block;
+}
+
+.producto__opt select {
+    border: 1px solid;
+    border-color: #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    color: black;
+}
+
+.conductores-coste .producto fieldset,  
+.conductores-coste .plataforma fieldset, 
+.conductores-coste .personal fieldset, 
+.conductores-coste .proyecto fieldset {
+    border: 1px solid;
+    border-color: rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+
+.resultado-row .__resultado p{
+    display: block;
+
+}
+
+.contenedor button {
+    display: block;
+    margin: auto;
+    background-color: #3a593b;
+    border: 1px solid;
+    border-color: #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #eee;
+}
+
+.resultado button:hover {
+    cursor: pointer;
+    border-color: #c8d9c8;
+}
+
+.ecuaciones {
+    border: 1px solid;
+    border-collapse: collapse;
+    margin: auto;
+}
+.ecuaciones.ecuaciones td {
+    border-color: #f7f9f7;
+
+}
+.ecuaciones td {
+    border: 1px solid;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+     background-color:rgb(57, 171, 111);
+}
+
+.contenedor-ecuaciones {
+    padding-top:10px; 
+}
+
+.contenedor .factores-escala {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.factor {
+    display: inline-block;
+    margin: 20px;
+}
+
+.factor p, 
+.factor select {
+    display: inline-block;
+}
+
+.factor select {
+    border: 1px solid;
+    border-color: #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    color: black;
+}
+
+.factores-escala fieldset {
+    border: 1px solid;
+    border-color: rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+
+.factores-escala .factEscala-legend { 
+    border: 1px solid;
+    border-color: rgba(0,0,0,.2);
+    border-radius: 3px;
+ }
+
+.factores-escala h3,
+.conductores-coste h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.resultado-contenedor .__resultado .resultado-titulo {
+    background-color: #324432;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 10px;
+    color: white;
+    margin: 0px;
+}
+
+#tiempoDesarrollo,
+#personasNecesarias,
+#costoTotal {
+    margin: 0px auto;
+    padding: 10px 10px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+hr {
+    margin: 0px;
+}
+legend{
+    color: white;
+}
+#divWin {
+    top: 52px;
+    position: fixed;
+    width: 340px;
+    height: 500px;
+    border: 1px solid #626562;
+    border-radius: 12px;
+    background: rgba(57, 171, 111, 0.95);
+    visibility: hidden;
+    padding: 2px;
+    text-align: center;
+    z-index: 99999;
+    left: 962px;
+  }
+
+#closetButton {
+    position:absolute; 
+    top:0;
+     right:0;
+      border-bottom:3px solid green; 
+     border-left:3px solid green;
+     border-radius: 25px;
+     width: 30px;
+      font-weight:bold; 
+      cursor:pointer;
+       padding:2px 4px;
+       z-index:99999999;  
+       background: darkcyan;
+   }

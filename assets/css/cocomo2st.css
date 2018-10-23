@@ -1,0 +1,317 @@
+.b-page-test-items,.b-page-test-switch
+{
+    width:300px;
+    margin-left: 10px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*Оформлення форми для збереженого тесту */
+.b-page-test-items__item,.b-page-test-switch__item
+{    width: 280px;
+    margin-top: 4px;
+    background-color: #fff;
+      height: 30px;
+       line-height: 30px;
+ 
+}
+.b-page-test-switch__item:hover
+{
+    cursor: pointer;
+
+}
+
+.b-page-test-items__item-percent
+{
+    float: none;
+    overflow: hidden;
+    
+    font-size:14px;
+    font-weight: 100;
+ margin-left: 5px; 
+    width: 50px;
+    overflow: hidden;
+}
+    #im{
+    
+    margin-left:10px;   
+    }
+    .muted {
+    color: #008080;
+    background: rgba(220, 220, 220, 0.4);
+    width: 600px; 
+	height:150px;
+	border-radius: 10px;
+	margin-top: 35px;
+	margin-left:350px;
+}
+    .style{
+
+	color: #008080;
+	font-family: Segoe Print; 
+	font-size: 24px;
+	background: rgba(220, 220, 220, 0.4);
+}
+    #h1 {
+	font-family: Segoe Print; 
+	font-size: 220%;
+	 color: #008080;
+
+}
+    #h3 {
+	font-family: Segoe Print; 
+	font-size: 170%;
+    color: #008080;
+}
+
+#js-back-to-top{ width: 30px;}
+
+ 
+/*Оформлення поля для вставки тесту */
+.b-input__area
+{
+    background: #fff;
+    width: 315px;
+    padding: 5px;
+    font-family: Segoe Print; ;
+    margin-left: 10px;
+    height: 275px;
+    border-color: #fff;
+    color:#000;
+    position: relative;
+    top: 33px;
+}
+/*Відстань поля тексту від заголовку */
+.b-page-main
+{
+    margin-top:5px;
+}
+/*Оформлення вуглів полів */
+.border-radius
+{
+       border-radius: 20px;
+}
+/*Оформлення кнопок */
+
+.b-page-transition
+{
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+/*Оформлення тіней кнопок і тексту */
+
+/*Оформлення кольору кнопок при виборі */
+
+.b-button-clickable:hover
+{
+    cursor: pointer;
+    background-color: #008dfa;
+}
+
+.hide
+{
+    display: none;
+}
+
+.b-page-test
+{
+    color: black;
+    margin-top: 10px;
+
+}
+
+.left-side
+{
+    float: left;
+}
+/*Оформлення положення збереженого тесту */
+.b-page-test-items,.b-page-test-switch
+{
+    width:300px;
+    margin-left: 10px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*Оформлення форми для збереженого тесту */
+.b-page-test-items__item,.b-page-test-switch__item
+{
+    margin-top: 2px;
+    background-color:  #8dc68ebd;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    width: 297px;
+    
+}
+/*Висота  для збереженого тесту */
+.b-page-test-switch__item
+{
+    height: 40px;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.b-page-test-switch__item:hover
+{
+    cursor: pointer;
+
+}
+
+.b-page-test-items__item-percent
+{
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.b-page-questions
+{
+    margin-left:15px;
+    width: 500px;
+    height: 100%;
+
+}
+
+.b-page-questions__answers
+{
+    font-size: 16;
+    height: 250px;
+    width: 297px;
+    padding: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    position: absolute;
+    top: 110px;
+}
+
+.b-page-questions__answers-item
+{
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+.b-page-questions__current
+{
+    width: 300px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    padding: 4px;
+    font-size: 16px;
+    color: black;
+    background-color: #fff;
+    position: absolute;
+    top: 355;
+}
+
+.b-page-questions__answer
+{
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    position: absolute;
+    top: 427px;
+    left: 200px;
+    font-size: 16px;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.b-page-test-switch__selected
+{
+    background-color: #eee;
+}
+
+.b-page-test-items__item-title,.b-page-test-items__item
+{
+    overflow: hidden;
+}
+
+.b-page-input
+{
+    background-color: #fff;
+    float: left;
+    padding: 10px;
+
+}
+
+.b-input
+{
+    height: 25px;
+    font-size: 15px;
+}
+
+.b-textarea
+{
+    height:200px;
+    width: 500px;
+    display: block;
+}
+
+
+.b-variable-form
+{
+    margin-left: 20px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.existing-variables-background-none
+{
+    background-color: transparent;
+}
+
+.b-textarea-margin
+{
+    margin-top:15px;
+
+}
+
+.b-page-input-hide
+{
+    display: none;
+}
+
+.b-checkbox
+{
+    vertical-align: bottom;
+}
+
+.b-page-test-switch__item_small
+{
+    height: 30px;
+}
+
+.b-input_long
+{
+    width: 440px;
+}
+
+.right-side
+{
+    float: right;
+}
+
+.b-variable-form__line-height
+{
+    line-height: 31px;
+    margin-top:10px;
+}
+
+.b-variable-form_long
+{
+    width: 580px;
+}
+
+.b-page-questions__answer_long
+{
+    width:300px;
+}
+
+	

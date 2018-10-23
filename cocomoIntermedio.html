@@ -1,0 +1,452 @@
+<html lang="ru" >
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="KD" content="" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>Розрахунок вартості програмної розробки</title>
+<!-- BOOTSTRAP CORE CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- ION ICONS STYLES -->
+<link href="assets/css/ionicons.css" rel="stylesheet" />
+<!-- FONT AWESOME ICONS STYLES -->
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<!-- FANCYBOX POPUP STYLES -->
+<link href="assets/js/source/jquery.fancybox.css" rel="stylesheet" />
+<!-- STYLES FOR VIEWPORT ANIMATION -->
+<link href="assets/css/animations.min.css" rel="stylesheet" />
+<!-- CUSTOM CSS -->
+<link href="assets/css/style-green.css" rel="stylesheet" />
+<link href="assets/css/new.css" rel="stylesheet" />
+<link href="assets/css/cocomo2st.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+
+</head>
+<body data-spy="scroll" data-target="#menu-section">
+<!--MENU SECTION START-->
+            <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                            <a class="navbar-brand" href="index.html">
+                            COMETA
+                            </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Головна</a></li>
+                            <li><a href="#pricing">Перехідна модель</a></li>
+                             <li><a href="cocomo2.html">Базова модель</a></li>
+                            <li><a href="cocomoII.html">Модель Cocomo II</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--MENU SECTION END-->
+            <!--SERVICE SECTION START-->
+       
+        <section id="home" >
+            <div class="container">
+                <div class="row text-center header">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+                           <h3>Перехідна модель</h3>
+                            <span>Cocomo Intermediate</span>
+                    </div>
+                </div>
+                    <div class="row animate-in" data-anim-type="fade-in-up">
+                                <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
+                                    <div class="services-wrapper">
+                                        <p>За основу бере початкове COCOMO. Використовує коефіцієнт коригування зусиль, який розраховується як продукт з 15 множників (драйвери витрат), що включають суб'єктивні оцінки характеристик продукту, проекту, персоналу і апаратного забезпечення.</p>
+                                        <h3>Для розрахунку за перехідною моделлю потрібно:</h3>
+                                     <ul class="list-group list-group-flush" style="color: black">
+                                        <li class="list-group-item"> 1. Обрати правильний тип для розроблювального проекту.</li>
+                                         <li class="list-group-item">2. Ввести кількість рядків коду в тисячах (KLDC) та середню ціну за місяць (CPM). Це можна зробити завантаживши <a href="http://www.locmetrics.com/">дану програму</a></li>
+                                         <li class="list-group-item">3. Обрати драйвери витрат </li>
+                                        <li class="list-group-item"> 4. Обчислити </li>
+                                     </ul>
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+        </section>
+        <section id="pricing">
+             <div class="row text-center header animate-in" data-anim-type="fade-in-up">
+               <div class="contenedor">
+                  <div class="opciones-contenedor">
+                     <div class="row text-center header">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+                           <h2>РОЗРАХУНОК</h2>
+                           <p style="color: rgb(57, 171, 111);">Якщо виникли труднощі натисніть "?" та оберіть відповідну тему для допомоги!
+                           <a class="btn button-custom btn-custom-two"  onclick="winOpen();"> ? </a></p>
+                            <div id="divWin">
+                                <div id="closetButton" onclick="winCloset();">X</div>
+                                        <div class="b-top-bar ">
+                                            <div id="start-test"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style=" width: 70px; background: darkcyan; ">Почати!</div>
+                                            <div id="data-format"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 90px; position: absolute; left: 80px; background: darkcyan; top: 46px;">Вибір  типу</div>
+                                            <div id="data-format"  class="test2 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 90px; position: absolute; left: 172px; background: darkcyan; top: 46px;">Розмір БД</div>
+                    <div id="data-format"  class="test3 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 226px; position: absolute; left: 80px; background: darkcyan; top: 2px;">Оточення віртуальної машини</div>
+                    <div id="data-format"  class="test3 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 184px; position: absolute; left: 80px; background: darkcyan; top: 24px;">Складність продукту</div>
+                                            </div>
+                                        <div class="b-page-main">
+                                                     <br>
+                                                <textarea id="test"  class="form-control b-input__area " style="height: 150px;"  placeholder="Оберіть необхідну тему щоб почати"></textarea>
+                                                <div class="b-page-test-switch left-side"> </div>
+                                        </div>
+                                         <div class="b-page-test hide ">
+                                               <div class="b-page-test-items left-side"></div>
+                                               <div class="b-page-questions left-side">
+                                                    <div id="answers" class="b-page-questions__answers border-radius"> </div>
+                                                     <div id=current-question class="b-page-questions__current border-radius">Поточне питання!</div>
+                                                     <label class="control-label" for="current-answer"><p><font style="color: white; top: 427px; left: 25px; position: absolute;">Введіть сюди відповідь</font></p></label>
+                                                     <input type="text" id=current-answer class="b-page-questions__answer" value="50" placeholder="Імовірність" title="Введіть значення від 0 (ні) до 1 (так). Якщо ви не знаєте 0.5" />
+                                                     <div id=complete-answer style=" position: absolute; top: 460px; left: 110px; background: darkcyan; width: 120px; color: white;" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable">Відповісти!</div>
+                                               </div>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                     <div class="col-lg-4 col-md-4 text-center">
+                        <div class="organico" id="organico">
+                            <div class="tipo">
+                                <h3>Органічний тип (Розповсюджений)</h3>
+                                <span>Organic mode</span>
+                            </div>
+                            <p>Проект невеликого і простого програмного забезпечення над якими працює маленька команда з хорошим досвідом роботи і не жорсткими вимогами до розробки.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 text-center">
+                        <div class="moderado" id="moderado">
+                            <div class="tipo">
+                                <h3>Напівнезалежний тип</h3>
+                                <span>Semi detached projects</span>
+                            </div>
+                            <p>середній програмний проект за розмірами та складністю, над яким працює команда яка має різний рівень досвіду та яка повинна задовольняти змішаним вимогам до розробки (середнім/жорстким).</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 text-center">
+                        <div class="embebido" id="embebido">
+                            <div class="tipo">
+                                <h3>Вбудований тип</h3>
+                                <span>Embedded projects</span>
+                            </div>
+                            <p> Проект розроблюється з урахуванням безлічі жорстких обмежень (по апаратному, програмному, операційному забезпеченню і тощо).</p>
+                        </div>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="contenedor contenedor-entradas">
+                                <div class="resultado">
+                                    <div class="resultado-row">
+                                        <div class="__resultado entradas">
+                                            <input style="color: black" title="Введіть кількість рядків Вашого коду (тис.)" type="number" name="" id="kldc" placeholder="KLDC" required>
+                                        </div>
+                                        <div class="__resultado entradas">
+                                            <input style="color: black" title="Введіть середню ціну за місяць" type="number" name="" id="salario" placeholder="CPM" required>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="contenedor">
+                                <div class="conductores-coste">
+                                    <div class="producto">
+                                        <fieldset> 
+                                        <legend>Атрибути продукту</legend>
+                                        <table><tr>
+                                           <td> <div class="producto__opt">
+                                                <p>Вимоги до надійності продукту</p>
+                                                <select id="rss">
+                                                    <option value="0.75">Дуже низький</option>
+                                                    <option value="0.88">Низький</option>
+                                                    <option value="1.00" selected>Середній</option>
+                                                    <option value="1.15">Високий</option>
+                                                    <option value="1.40">Дуже високий</option>
+                                                </select>
+                                            </div></td>
+                                         <td>   <div class="producto__opt">
+                                                <p>Розмір БД додатку</p>
+                                                <select id="tbd">
+                                                    <option value="0.94">Низький</option>
+                                                    <option value="1.00" selected>Середній</option>
+                                                    <option value="1.08">Високий</option>
+                                                    <option value="1.16">Дуже високий</option>
+                                                </select>
+                                                <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 654px; top: 66px;"  onclick="winOpen();"> ? </a></p>
+                          
+                                            </div></td>
+                                           <td> <div class="producto__opt">
+                                                <p>Складність продукту</p>
+                                                <select id="cpr">
+                                                    <option value="0.70">Дуже низький</option>
+                                                    <option value="0.85">Низький</option>
+                                                    <option value="1.00" selected>Середній</option>
+                                                    <option value="1.15">Високий</option>
+                                                    <option value="1.30">Дуже високий</option>
+                                                    <option value="1.65">Екстра високий</option>
+                                                </select>
+                                                <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 973px; top: 66px;"  onclick="winOpen();"> ? </a></p>
+                                            </div></td> </tr></table>
+                                        </fieldset>
+                                   
+                                    </div>
+                                    <div class="plataforma">
+                                        <fieldset>
+                                            <legend>Атрибути платформи</legend>
+                                            <table>
+                                                <tr>
+                                                    <td><div class="producto__opt">
+                                                            <p>обмеження швидкості дій при виконанні програми</p>
+                                                            <select id="rte">
+                                                                <option value="1.00" selected>Середній</option>
+                                                                <option value="1.11">Високий</option>
+                                                                <option value="1.30">Дуже високий</option>
+                                                                <option value="1.66">Екстра високий</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                   <td> <div class="producto__opt">
+                                                            <p>Обмеження пам'яті</p>
+                                                            <select id="rmp">
+                                                                <option value="1.00" selected>Середній</option>
+                                                                <option value="1.06">Високий</option>
+                                                                <option value="1.30">Дуже високий</option>
+                                                                <option value="1.58">Екстра високий</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                   <td> <div class="producto__opt">
+                                                            <p>Нестійкість оточення віртуальної машини</p>
+                                                            <select id="vmc">
+                                                                <option value="0.87">Низький</option>
+                                                                <option value="1.00" selected>Середній</option>
+                                                                <option value="1.15">Високий</option>
+                                                                <option value="1.30">Дуже високий</option>
+                                                            </select>
+                                                            <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 779px; top: 100px;"  onclick="winOpen();"> ? </a></p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="producto__opt">
+                                                            <p>Необхідний на відновлення час</p>
+                                                            <select id="trc">
+                                                                <option value="0.87">Низький</option>
+                                                                <option value="1.00" selected>Середній</option>
+                                                                <option value="1.07">Високий</option>
+                                                                <option value="1.15">Дуже високий</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </fieldset>
+                                    </div>
+                                    <div class="personal">
+                                        <fieldset>
+                                        <legend>Атрибути персоналу</legend>
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="producto__opt">
+                                                        <p>Аналітичні здібності</p>
+                                                        <select id="can">
+                                                            <option value="1.46">Дуже низькі</option>
+                                                            <option value="1.19">Низькі</option>
+                                                            <option value="1.00" selected>Середні</option>
+                                                            <option value="0.86">Високі</option>
+                                                            <option value="0.71">Дуже високі</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Досвід розробки</p>
+                                                        <select id="ean">
+                                                            <option value="1.29">Дуже низький</option>
+                                                            <option value="1.13">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="0.91">Високий</option>
+                                                            <option value="0.82">Дуже високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Здібності до розробки ПЗ</p>
+                                                        <select id="cpro">
+                                                            <option value="1.42">Дуже низькі</option>
+                                                            <option value="1.17">Низькі</option>
+                                                            <option value="1.00" selected>Середні</option>
+                                                            <option value="0.86">Високі</option>
+                                                            <option value="0.70">Дуже високі</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Досвід використання віртуальних машин</p>
+                                                        <select id="eso">
+                                                            <option value="1.21">Дуже низький</option>
+                                                            <option value="1.12">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="0.96">Високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Досвід розробки на мовах програмування</p>
+                                                        <select id="elp">
+                                                            <option value="1.14">Дуже низький</option>
+                                                            <option value="1.10">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="0.95">Високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                      </fieldset>
+                                    </div>
+                                    <div class="proyecto">
+                                      <fieldset>
+                                        <legend>Атрибути проекту</legend>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Застосування методів розробки ПЗ</p>
+                                                        <select id="utp">
+                                                            <option value="1.24">Дуже низький</option>
+                                                            <option value="1.10">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="0.91">Високий</option>
+                                                            <option value="0.82">Дуже високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Використання інструментарію розробки ПЗ</p>
+                                                        <select id="uhs">
+                                                            <option value="1.24">Дуже низький</option>
+                                                            <option value="1.10">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="0.91">Високий</option>
+                                                            <option value="0.83">Дуже високий</option>
+                                                            <option value="0.70">Екстра високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Вимоги дотримання графіку робіт</p>
+                                                        <select id="rlp">
+                                                            <option value="1.23">Дуже низький</option>
+                                                            <option value="1.08">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="1.04">Високий</option>
+                                                            <option value="1.10">Дуже високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                      </fieldset>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="contenedor">
+                                <button id="calcular">Розрахувати</button>             
+                            </div>
+                         <div class="contenedor contenedor-ecuaciones">
+                            <table class="ecuaciones">
+                                <tr class="titulo-ecuaciones">
+                                     <td>Тип розробки</td>
+                                     <td>Трудомісткість</td>
+                                     <td>Термін розробки або тривалість</td>
+                                </tr>
+                                <tr class="fila-organico">
+                                    <td>Органічний</td>
+                                    <td>Трудомісткість = 3.2 x (KLDC)<sup>1.05</sup> x FEC</td>
+                                    <td>Тривалість = 2.5 x (Трудомісткість)<sup>0.38</sup></td>
+                                </tr>
+                                <tr class="fila-moderado">
+                                    <td>Напівнезалежний</td>
+                                    <td>Трудомісткість = 3.0 x (KLDC)<sup>1.12</sup> x FEC</td>
+                                    <td>Тривалість = 2.5 x (Трудомісткість)<sup>0.35</sup></td>
+                                </tr>
+                                <tr class="fila-empotrado">
+                                    <td>Вбудований</td>
+                                    <td>Трудомісткість = 3.6 x (KLDC)<sup>1.20</sup> x FEC</td>
+                                    <td>Тривалість = 2.5 x (Трудомісткість)<sup>0.32</sup></td>
+                                </tr>
+                            </table>
+                         </div>
+                         <div class="contenedor">
+                                <div class="resultado">
+                                    <div class="resultado-row">
+                                        <div class="resultado-contenedor">
+                                            <div class="__resultado">
+                                                <p class="resultado-titulo">Тривалість розробки:</p>
+                                                <p id="tiempoDesarrollo"></p>
+                                                <hr>
+                                            </div>
+                                            <div class="__resultado">
+                                                <p class="resultado-titulo">Трудомісткість:</p>
+                                                <p id="personasNecesarias"></p>
+                                                <hr>
+                                            </div>
+                                            <div class="__resultado">
+                                                <p class="resultado-titulo">Загальна вартість проекту:</p>
+                                                <p id="costoTotal"></p>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="contenedor">
+                            <button id="restablecer">Заново</button>
+                        </div>   
+                    </div>  
+             </div>
+       </section>
+       
+
+                <!-- CORE JQUERY -->
+        <script src="assets/js/jquery-1.11.1.js"></script>
+        <!-- BOOTSTRAP SCRIPTS -->
+        <script src="assets/js/bootstrap.js"></script>
+        <!-- EASING SCROLL SCRIPTS PLUGIN -->
+        <script src="assets/js/vegas/jquery.vegas.min.js"></script>
+        <!-- VEGAS SLIDESHOW SCRIPTS -->
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <!-- FANCYBOX PLUGIN -->
+        <script src="assets/js/source/jquery.fancybox.js"></script>
+        <!-- ISOTOPE SCRIPTS -->
+        <script src="assets/js/jquery.isotope.js"></script>
+
+        <!-- VIEWPORT ANIMATION SCRIPTS   -->
+        <script src="assets/js/appear.min.js"></script>
+        <script src="assets/js/animations.min.js"></script>
+        <!-- CUSTOM SCRIPTS -->
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/script-intermedio.js"></script>
+      <!--  <script src="assets/js/expert2.js"></script> -->
+       <script src="assets/js/expert.js"></script> 
+        <script src="assets/js/jquery-migrate.min.js"></script>
+        <!------------------------------------------>
+    </body>
+</html>

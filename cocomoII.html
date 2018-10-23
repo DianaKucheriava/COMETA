@@ -1,0 +1,493 @@
+<html lang="ru" >
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="KD" content="" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>Розрахунок вартості програмної розробки</title>
+<!-- BOOTSTRAP CORE CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- ION ICONS STYLES -->
+<link href="assets/css/ionicons.css" rel="stylesheet" />
+<!-- FONT AWESOME ICONS STYLES -->
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<!-- FANCYBOX POPUP STYLES -->
+<link href="assets/js/source/jquery.fancybox.css" rel="stylesheet" />
+<!-- STYLES FOR VIEWPORT ANIMATION -->
+<link href="assets/css/animations.min.css" rel="stylesheet" />
+<!-- CUSTOM CSS -->
+<link href="assets/css/style-green.css" rel="stylesheet" />
+<link href="assets/css/new.css" rel="stylesheet" />
+
+
+</head>
+<body data-spy="scroll" data-target="#menu-section">
+<!--MENU SECTION START-->
+            <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                            <a class="navbar-brand" href="index.html">
+                            COMETA
+                            </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Головна</a></li>
+                            <li><a href="#pricing">Модель Cocomo II</a></li>
+                            <li><a href="cocomo2.html">Базова модель</a></li>
+                            <li><a href="cocomoIntermedio.html">Перехідна модель</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--MENU SECTION END-->
+            <!--SERVICE SECTION START-->
+       
+        <section id="home" >
+            <div class="container">
+                <div class="row text-center header">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+                           <h3>Модель Cocomo II</h3>
+                    </div>
+                </div>
+                    <div class="row animate-in" data-anim-type="fade-in-up">
+                                <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
+                                    <div class="services-wrapper">
+                                        <p>Детальний рівень включає в себе всі характеристики середнього рівня з оцінкою впливу даних характеристик на кожен етап процесу розробки ПЗ.</p>
+                                        <h3>Для розрахунку за базовою моделлю потрібно:</h3>
+                                     <ul class="list-group list-group-flush" style="color: black">
+                                           <li class="list-group-item">1. Ввести кількість рядків коду в тисячах (KLDC) та середню ціну за місяць (CPM). Це можна зробити завантаживши <a href="http://www.locmetrics.com/">дану програму</a></li>
+                                           <li class="list-group-item"> 2. Обрати драйвери масштабу </li>
+                                             <li class="list-group-item"> 3. Обрати драйвери витрат</li>
+                                        <li class="list-group-item"> 4. Обчислити </li>
+                                     </ul>
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+        </section>
+        <section id="pricing">
+            <div class="row text-center header animate-in" data-anim-type="fade-in-up">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              
+                <div class="row text-center header">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+                           <h2>РОЗРАХУНОК</h2>
+                    </div>
+                </div>
+                 <div class="contenedor contenedor-entradas">
+                    <div class="resultado">
+                        <div class="resultado-row">
+                            <div class="__resultado entradas">
+                                <input style="color: black" title="Введіть кількість рядків Вашого коду (тис.)" type="number" name="" id="kldc" placeholder="KLDC" required>
+                            </div>
+                            <div class="__resultado entradas">
+                                <input style="color: black" title="Введіть середню ціну за місяць" type="number" name="" id="salario" placeholder="CPM" required>
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+            </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="contenedor">
+                <div class="factores-escala"> 
+                    <h3>Фактори масштабу</h3>
+                    <div class="factEscala-legend">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="factor">
+                                        <p>"PREC" - Прецедентність, наявність досвіду аналогічних розробок</p>
+                                        <select id="prec">
+                                            <option title="Досвід в продукті і платформі відсутній" value="6.20">Дуже низький</option>
+                                            <option value="4.96">Низький</option>
+                                            <option value="3.72" selected>Середній</option>
+                                            <option value="2.48">Високий</option>
+                                            <option value="1.24">Дуже високий</option>
+                                            <option title="Продукт і платформа повністю знайомі" value="0.00">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="factor">
+                                        <p>"FLEX" - Гнучкість процесу розробки</p>
+                                        <select id="flex">
+                                            <option title="Процес строго детермінований" value="5.07">Дуже низький</option>
+                                            <option value="4.05">Низький</option>
+                                            <option value="3.04" selected>Середній</option>
+                                            <option value="2.03">Високий</option>
+                                            <option value="1.01">Дуже високий</option>
+                                            <option title="Визначені тільки загальні цілі" value="0.00">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="factor">
+                                        <p>"RESL" - Архітектура і передбачення ризиків</p>
+                                        <select id="resl">
+                                            <option title="Ризики відомі/проаналізовані на 20%" value="7.07">Дуже низький</option>
+                                            <option value="5.65">Низький</option>
+                                            <option value="4.24" selected>Середній</option>
+                                            <option value="2.83">Високий</option>
+                                            <option value="1.41">Дуже високий</option>
+                                            <option title="Ризики передбачені на 100%" value="0.00">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="factor">
+                                        <p>"TEAM" - Спрацьованість команди</p>
+                                        <select id="team">
+                                            <option title="Формальні взаємодії" value="5.48">Дуже низький</option>
+                                            <option value="4.38">Низький</option>
+                                            <option value="3.29" selected>Середній</option>
+                                            <option value="2.19">Високий</option>
+                                            <option value="1.10">Дуже високий</option>
+                                            <option title="Повна довіра, взаємодопомога і взаємоповага" value="0.00">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="factor">
+                                        <p>"PMAT" - Зрілість процесів</p>
+                                        <select id="pmat">
+                                            <option title="За п'ятирівневою моделлю зрілості можливостей компанії-розробника - 1 Рівень (нижче середнього)" value="7.80">Дуже низький</option>
+                                            <option value="6.24">Низький</option>
+                                            <option value="4.68" selected>Середній</option>
+                                            <option value="3.12">Високий</option>
+                                            <option value="1.56">Дуже високий</option>
+                                            <option title="За п'ятирівневою моделлю зрілості можливостей компанії-розробника - 5 Рівень" value="0.00">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+              <div class="conductores-coste">
+                    <h2>"Драйвери витрат"</h2>
+                    <div class="producto">
+                        <fieldset>
+                             <legend>Атрибути продукту</legend>
+                                        <table>
+                                            <tr>
+                                               <td colspan="2"> 
+                                                    <div class="producto__opt">
+                                                        <p>Вимоги до надійності продукту</p>
+                                                        <select id="rss">
+                                                            <option value="0.82">Дуже низький</option>
+                                                            <option value="0.92">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="1.10">Високий</option>
+                                                            <option value="1.26">Дуже високий</option>
+                                                        </select>
+                                                      </div>
+                                                </td>
+                                                <td>   
+                                                    <div class="producto__opt">
+                                                          <p>Розмір БД додатку</p>
+                                                              <select id="tbd">
+                                                                  <option value="0.90">Низький</option>
+                                                                  <option value="1.00" selected>Середній</option>
+                                                                   <option value="1.14">Високий</option>
+                                                                  <option value="1.28">Дуже високий</option>
+                                                               </select>
+                                                     </div>
+                                                 </td>
+                                             </tr>
+                                             <tr>
+                                                <td> 
+                                                    <div class="producto__opt">
+                                                        <p>Складність продукту</p>
+                                                        <select id="cpr">
+                                                            <option value="0.73">Дуже низький</option>
+                                                            <option value="0.87">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="1.17">Високий</option>
+                                                            <option value="1.34">Дуже високий</option>
+                                                            <option value="1.74">Екстра високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                         <p>Розробка для повторного використання:</p>
+                                                              <select id="ruse">
+                                                                      <option  value="0.95">Низький</option>
+                                                                      <option value="1.00" selected>Середній</option>
+                                                                      <option value="1.07">Високий</option>
+                                                                      <option value="1.15">Дуже високий</option>
+                                                                      <option value="1.24">Екстра високий</option>                                    
+                                                             </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="producto__opt">
+                                                        <p>Відповідність документації потребам життєвого циклу</p>
+                                                        <select id="doc">
+                                                            <option value="0.81">Дуже низький</option>
+                                                            <option value="0.91">Низький</option>
+                                                            <option value="1.00" selected>Середній</option>
+                                                            <option value="1.11">Високий</option>
+                                                            <option value="1.23">Дуже високий</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                        </fieldset>
+                    </div>
+                    <div class="plataforma">
+                        <fieldset>
+                            <legend>Атрибути платформи</legend>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="producto__opt">
+                                            <p>Обмеження часу виконання</p>
+                                            <select id="rte">
+                                                <option value="1.00" selected>Середній</option>
+                                                <option value="1.11">Високий</option>
+                                                <option value="1.29">Дуже високий</option>
+                                                <option value="1.63">Екстра високий</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="producto__opt">
+                                            <p>Обмеження пам'яті</p>
+                                            <select id="rmp">
+                                                <option value="1.00" selected>Середній</option>
+                                                <option value="1.05">Високий</option>
+                                                <option value="1.17">Дуже високий</option>
+                                                <option value="1.46">Екстра високий</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="producto__opt">
+                                            <p>Змінюваність платформи</p>
+                                            <select id="vmc">
+                                                <option value="0.87">Низький</option>
+                                                <option value="1.00" selected>Середній</option>
+                                                <option value="1.15">Високий</option>
+                                                <option value="1.30">Дуже високий</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </div>
+                    <div class="personal">
+                      <fieldset>
+                        <legend>Атрибути персоналу</legend>
+                         <table>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="producto__opt">
+                                        <p>Можливості аналітика</p>
+                                        <select id="can">
+                                            <option value="1.42">Дуже низький</option>
+                                            <option value="1.19">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.85">Високий</option>
+                                            <option value="0.71">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="producto__opt">
+                                        <p>Досвід розробки додатків</p>
+                                        <select id="eapl">
+                                            <option value="1.22">Дуже низький</option>
+                                            <option value="1.10">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.88">Високий</option>
+                                            <option value="0.81">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Можливості програміста</p>
+                                        <select id="cpro">
+                                            <option value="1.34">Дуже низький</option>
+                                            <option value="1.15">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.88">Високий</option>
+                                            <option value="0.76">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Тривалість роботи персоналу</p>
+                                        <select id="cper">
+                                            <option value="1.29">Дуже низький</option>
+                                            <option value="1.12">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.90">Високий</option>
+                                            <option value="0.81">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Досвід роботи з платформою</p>
+                                        <select id="epla">
+                                            <option value="1.19">Дуже низький</option>
+                                            <option value="1.09">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.91">Високий</option>
+                                            <option value="0.85">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Досвід викорисання мови програмування та інструментальних засобів</p>
+                                        <select id="elp">
+                                            <option value="1.20">Дуже низький</option>
+                                            <option value="1.09">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.91">Високий</option>
+                                            <option value="0.84">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                         </table>
+                      </fieldset>
+                    </div>
+                    <div class="proyecto">
+                      <fieldset>
+                        <legend>Атрибути проекту</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Використання інструментальних програмних засобів</p>
+                                        <select id="uhs">
+                                            <option value="1.17">Дуже низький</option>
+                                            <option value="1.09">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.90">Високий</option>
+                                            <option value="0.78">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Необхідне виконання графіку робіт</p>
+                                        <select id="rpl">
+                                            <option value="1.43">Дуже низький</option>
+                                            <option value="1.09">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="1.00">Високий</option>
+                                            <option value="1.00">Дуже високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="producto__opt">
+                                        <p>Багатоабонентська (віддалена) розробка</p>
+                                        <select id="dms">
+                                            <option value="1.22">Дуже низький</option>
+                                            <option value="1.09">Низький</option>
+                                            <option value="1.00" selected>Середній</option>
+                                            <option value="0.93">Високий</option>
+                                            <option value="0.86">Дуже високий</option>
+                                            <option value="0.80">Екстра високий</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        </fieldset>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="contenedor">
+                <button id="calcular">Розрахувати</button>
+            </div>
+            
+            <div class="contenedor contenedor-ecuaciones">
+                <table class="ecuaciones">
+                    <tr class="titulo-ecuaciones">
+                       <td>Трудомісткість</td>
+                       <td>Термін розробки або тривалість</td>
+                    </tr>
+                    <tr class="fila-ecuacion">
+                        <td>Трудомісткість = 2.94 x FEC x (KLDC)<sup>0.91 + SUM(Fi)/100</sup></td>
+                        <td>Тривалість = 3.67 x (Трудомісткість)<sup>0.28 + 0.2 * SUM(Fi)/100</sup></td>
+                    </tr>
+                </table>
+            </div>
+             
+            <div class="contenedor">
+                <div class="resultado">
+                    <div class="resultado-row">
+                        <div class="resultado-contenedor">
+                            <div class="__resultado">
+                                <p class="resultado-titulo">Тривалість розробки:</p>
+                                <p id="tiempoDesarrollo"></p>
+                                <hr>
+                            </div>
+                            <div class="__resultado">
+                                <p class="resultado-titulo">Трудомісткість:</p>
+                                <p id="personasNecesarias"></p>
+                                <hr>
+                            </div>
+                            <div class="__resultado">
+                                <p class="resultado-titulo">Загальна вартість проекту:</p>
+                                <p id="costoTotal"></p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <button id="restablecer">Заново</button>
+            </div>     
+          </div>      
+         </div>
+       </section>
+
+                <!-- CORE JQUERY -->
+        <script src="assets/js/jquery-1.11.1.js"></script>
+        <!-- BOOTSTRAP SCRIPTS -->
+        <script src="assets/js/bootstrap.js"></script>
+        <!-- EASING SCROLL SCRIPTS PLUGIN -->
+        <script src="assets/js/vegas/jquery.vegas.min.js"></script>
+        <!-- VEGAS SLIDESHOW SCRIPTS -->
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <!-- FANCYBOX PLUGIN -->
+        <script src="assets/js/source/jquery.fancybox.js"></script>
+        <!-- ISOTOPE SCRIPTS -->
+        <script src="assets/js/jquery.isotope.js"></script>
+        <!-- VIEWPORT ANIMATION SCRIPTS   -->
+        <script src="assets/js/appear.min.js"></script>
+        <script src="assets/js/animations.min.js"></script>
+        <!-- CUSTOM SCRIPTS -->
+         <script src="assets/js/custom.js"></script>
+        <script src="assets/js/script-cocomo2.js"></script>
+        <!------------------------------------------>
+    </body>
+</html>
