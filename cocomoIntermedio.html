@@ -21,6 +21,9 @@
 <link href="assets/css/style-green.css" rel="stylesheet" />
 <link href="assets/css/new.css" rel="stylesheet" />
 <link href="assets/css/cocomo2st.css" rel="stylesheet" />
+
+ 
+
 </head>
 <body data-spy="scroll" data-target="#menu-section">
 <!--MENU SECTION START-->
@@ -79,18 +82,19 @@
                <div class="contenedor">
                   <div class="opciones-contenedor">
                      <div class="row text-center header">
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
-                           <h2>РОЗРАХУНОК</h2>
-                           <p style="color: rgb(57, 171, 111);">Якщо виникли труднощі натисніть "?" та оберіть відповідну тему для допомоги!
-                           <a class="btn button-custom btn-custom-two"  onclick="winOpen();"> ? </a></p>
-                            <div id="divWin">
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+                               <h2>РОЗРАХУНОК</h2>
+                               <p style="color: rgb(57, 171, 111);">Якщо виникли труднощі натисніть "?" та оберіть відповідну тему для допомоги!
+                               <a class="btn button-custom btn-custom-two"  onclick="winOpen();"> ? </a></p>
+                          </div>
+                        </div>
+                        <div id="divWin">
                                 <div id="closetButton" onclick="winCloset();">X</div>
                                         <div class="b-top-bar ">
                                             <div id="start-test"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style=" width: 70px; background: darkcyan; ">Почати!</div>
-                                            <div id="data-format"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 90px; position: absolute; left: 80px; background: darkcyan; top: 25px;">Вибір  типу</div>
-                                            <div id="data-format"  class="test2 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 131px; position: absolute; left: 172px; background: darkcyan; top: 25px;">Розмір БД</div>
-                    <div id="data-format"  class="test3 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 226px; position: absolute; left: 80px; background: darkcyan; top: 2px;">Оточення віртуальної машини</div>
-                    <div id="data-format"  class="test4 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 230px; position: absolute; left: 80px; background: darkcyan; top: 48px;">Складність продукту</div>
+                                            <div id="data-format"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 90px; position: absolute; left: 80px; background: darkcyan; top: 46px;">Вибір  типу</div>
+                                            <div id="data-format"  class="test3 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 226px; position: absolute; left: 80px; background: darkcyan; top: 2px;">Оточення віртуальної машини</div>
+                    <div id="data-format"  class="test4 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 184px; position: absolute; left: 80px; background: darkcyan; top: 24px;">Складність продукту</div>
                                             </div>
                                         <div class="b-page-main">
                                                      <br>
@@ -102,14 +106,12 @@
                                                <div class="b-page-questions left-side">
                                                     <div id="answers" class="b-page-questions__answers border-radius"> </div>
                                                      <div id=current-question class="b-page-questions__current border-radius">Поточне питання!</div>
-                                                     <label class="control-label" for="current-answer"><p><font style="color: white; top: 427px; left: 25px; position: absolute;">Введіть сюди відповідь</font></p></label>
+                                                     <label class="control-label" for="current-answer"><p><font style="color: white; top: 435px; left: 25px; position: absolute;">Введіть сюди відповідь</font></p></label>
                                                      <input type="text" id=current-answer class="b-page-questions__answer" value="50" placeholder="Імовірність" title="Введіть значення від 0 (ні) до 1 (так). Якщо ви не знаєте 0.5" />
-                                                     <div id=complete-answer style=" position: absolute; top: 460px; left: 110px; background: darkcyan; width: 120px; color: white;" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable">Відповісти!</div>
+                                                     <div id=complete-answer style=" position: absolute; top: 465px; left: 110px; background: darkcyan; width: 120px; color: white;" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable">Відповісти!</div>
                                                </div>
                                          </div>
                                     </div>
-                                </div>
-                            </div>
                      <div class="col-lg-4 col-md-4 text-center">
                         <div class="organico" id="organico">
                             <div class="tipo">
@@ -176,7 +178,16 @@
                                                     <option value="1.08">Високий</option>
                                                     <option value="1.16">Дуже високий</option>
                                                 </select>
-                                                <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 654px; top: 66px;"  onclick="winOpen();"> ? </a></p>
+                                                <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 654px; top: 66px;"  onclick="OpenDB();"> ? </a></p>
+                                                <div id="DB">
+                                                    <div id="closetButton" onclick="winClose();">X</div>
+                                                        <p style=" top: 32px; position: absolute; left: 10px;">DB bytes</p> <input type="text" id="dab" name="dab" value="" style="position: relative; top: 25px; width: 100px; left: 15px; border-radius: 5px; color: black;" placeholder="Введіть DB bytes">   
+                                                     <p style="top: 27px; position: relative; left: 26px;">KSLOC</p> <input  type="text" id="sloc" name="sloc" value="" style="position: relative; width: 100px; top: 25px; left: 26px; border-radius: 5px; color: black;" placeholder="Введіть KSLOC" />
+                                                        <div id="result" >
+                                                        <p id="valueDB" style="position: absolute; top: 72px; right: 144px;" ></p></div>
+                                                        <button name="sub" onclick="sizeBD();" style="width: 100px; height: 40px; position: relative; top: 70px; left: -46px;">Розрахувати</button>
+                                                        <button id="clear" name="clear" style="width: 100px; height: 40px; position: relative; left: 60px; top: 20px" > Очистити </button>
+                                                </div>
                           
                                             </div></td>
                                            <td> <div class="producto__opt">
@@ -443,6 +454,7 @@
         <script src="assets/js/script-intermedio.js"></script>
       <!--  <script src="assets/js/expert2.js"></script> -->
        <script src="assets/js/expert.js"></script> 
+        <script src="assets/js/sizeDB.js"></script> 
         <script src="assets/js/jquery-migrate.min.js"></script>
         <!------------------------------------------>
     </body>
