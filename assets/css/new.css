@@ -131,7 +131,7 @@ section {
     border-radius: 5px 5px 5px 5px;
     background-color: #fff;
     color: #010d17 ;
-    height: 247px;
+    height: 210px;
 }
 
 .contenedor .opciones-contenedor .organico:hover,
@@ -329,10 +329,24 @@ legend{
     color: white;
 }
 #divWin {
-    top: 52px;
+    top: 31px;
     position: fixed;
-    width: 340px;
+    width: 360px;
     height: 500px;
+    border: 1px solid #626562;
+    border-radius: 12px;
+    background: rgba(57, 171, 111, 0.95);
+    visibility: hidden;
+    padding: 2px;
+    text-align: center;
+    z-index: 99999;
+    left: 962px;
+  }
+  #DB {
+    top: 31px;
+    position: fixed;
+    width: 360px;
+    height: 200px;
     border: 1px solid #626562;
     border-radius: 12px;
     background: rgba(57, 171, 111, 0.95);
