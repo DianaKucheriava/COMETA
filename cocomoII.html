@@ -20,6 +20,7 @@
 <!-- CUSTOM CSS -->
 <link href="assets/css/style-green.css" rel="stylesheet" />
 <link href="assets/css/new.css" rel="stylesheet" />
+<link href="assets/css/cocomo2st.css" rel="stylesheet" />
 
 
 </head>
@@ -81,8 +82,35 @@
                 <div class="row text-center header">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
                            <h2>РОЗРАХУНОК</h2>
+                            <p style="color: rgb(57, 171, 111);">Якщо виникли труднощі натисніть "?" та оберіть відповідну тему для допомоги!
+                           <a class="btn button-custom btn-custom-two"  onclick="winOpen();"> ? </a></p>
                     </div>
                 </div>
+                 <div id="divWin">
+                                <div id="closetButton" onclick="winCloset();">X</div>
+                                        <div class="b-top-bar ">
+                                            <div id="start-test"  class="border-radius b-button b-page-shadows b-button-clickable b-page-transition" style=" width: 70px; background: darkcyan; ">Почати!</div>
+                                             <div id="data-format"  class="test4 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 215px; position: absolute; left: 80px; background: darkcyan; top: 30px;">Складність продукту</div>
+                                             <div id="data-format"  class="test2 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 215px; position: absolute; left: 80px; background: darkcyan; top: 53px;">Змінюваність платформи</div>
+                                             <div id="data-format"  class="test5 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 215px; position: absolute; left: 80px; background: darkcyan; top: 4px;">Зрілість процесів</div>
+                                              <div id="data-format"  class="test6 border-radius b-button b-page-shadows b-button-clickable b-page-transition" style="width: 215px; position: absolute; left: 80px; background: darkcyan; top: 76px;">Відповідність документації потребам життєвого циклу</div>
+                                            </div>
+                                        <div class="b-page-main">
+                                                     <br>
+                                               <textarea id="test"  class="form-control b-input__area " style="height: 150px;"  placeholder="Оберіть необхідну тему щоб почати"></textarea>
+                                                <div class="b-page-test-switch left-side"> </div>
+                                        </div>
+                                         <div class="b-page-test hide ">
+                                               <div class="b-page-test-items left-side"></div>
+                                               <div class="b-page-questions left-side">
+                                                    <div id="answers" class="b-page-questions__answers border-radius"> </div>
+                                                     <div id=current-question class="b-page-questions__current border-radius">Поточне питання!</div>
+                                                     <label class="control-label" for="current-answer"><p><font style="color: white; top: 435px; left: 25px; position: absolute;">Введіть сюди відповідь</font></p></label>
+                                                     <input type="text" id=current-answer class="b-page-questions__answer" value="50" placeholder="Імовірність" title="Введіть значення від 0 (ні) до 1 (так). Якщо ви не знаєте 0.5" />
+                                                     <div id=complete-answer style=" position: absolute; top: 465px; left: 110px; background: darkcyan; width: 120px; color: white;" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable">Відповісти!</div>
+                                               </div>
+                                         </div>
+                                    </div>
                  <div class="contenedor contenedor-entradas">
                     <div class="resultado">
                         <div class="resultado-row">
@@ -168,6 +196,7 @@
                                             <option value="1.56">Дуже високий</option>
                                             <option title="За п'ятирівневою моделлю зрілості можливостей компанії-розробника - 5 Рівень" value="0.00">Екстра високий</option>
                                         </select>
+                                         <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; right: 228px; top: 195px;"  onclick="winOpen();"> ? </a></p>
                                     </div>
                                 </td>
                             </tr>
@@ -187,11 +216,11 @@
                                                     <div class="producto__opt">
                                                         <p>Вимоги до надійності продукту</p>
                                                         <select id="rss">
-                                                            <option value="0.82">Дуже низький</option>
-                                                            <option value="0.92">Низький</option>
-                                                            <option value="1.00" selected>Середній</option>
-                                                            <option value="1.10">Високий</option>
-                                                            <option value="1.26">Дуже високий</option>
+                                                            <option title="Невеликі незручності" value="0.82">Дуже низький</option>
+                                                            <option title="Легко відновлювані втрати" value="0.92">Низький</option>
+                                                            <option title="Легко відновлювані втрати" value="1.00" selected>Середній</option>
+                                                            <option title="Фінансові збитки" value="1.10">Високий</option>
+                                                            <option title="Ризик для життя людини" value="1.26">Дуже високий</option>
                                                         </select>
                                                       </div>
                                                 </td>
@@ -204,6 +233,16 @@
                                                                    <option value="1.14">Високий</option>
                                                                   <option value="1.28">Дуже високий</option>
                                                                </select>
+                                                             <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; right: 108px; top: 66px;"  onclick="OpenDB();"> ? </a></p>
+                                                <div id="DB">
+                                                    <div id="closetButton" onclick="winClose();">X</div>
+                                                        <p style=" top: 32px; position: absolute; left: 10px;">DB bytes</p> <input type="text" id="dab" name="dab" value="" style="position: relative; top: 25px; width: 100px; left: 15px; border-radius: 5px; color: black;" placeholder="Введіть DB bytes">   
+                                                     <p style="top: 27px; position: relative; left: 26px;">KSLOC</p> <input  type="text" id="sloc" name="sloc" value="" style="position: relative; width: 100px; top: 25px; left: 26px; border-radius: 5px; color: black;" placeholder="Введіть KSLOC" />
+                                                        <div id="result" >
+                                                        <p id="valueDB" style="position: absolute; top: 72px; right: 144px;" ></p></div>
+                                                        <button name="sub" onclick="sizeBD();" style="width: 100px; height: 40px; position: relative; top: 70px; left: -46px;">Розрахувати</button>
+                                                        <button id="clear" name="clear" style="width: 100px; height: 40px; position: relative; left: 60px; top: 20px" > Очистити </button>
+                                                </div>
                                                      </div>
                                                  </td>
                                              </tr>
@@ -219,23 +258,24 @@
                                                             <option value="1.34">Дуже високий</option>
                                                             <option value="1.74">Екстра високий</option>
                                                         </select>
+                                                         <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; left: 145px; top: 191px;"  onclick="winOpen();"> ? </a></p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="producto__opt">
-                                                         <p>Розробка для повторного використання:</p>
+                                                         <p>Розробка для повторного використання</p>
                                                               <select id="ruse">
-                                                                      <option  value="0.95">Низький</option>
-                                                                      <option value="1.00" selected>Середній</option>
-                                                                      <option value="1.07">Високий</option>
-                                                                      <option value="1.15">Дуже високий</option>
-                                                                      <option value="1.24">Екстра високий</option>                                    
+                                                               <option title="ніхто" value="0.95">Низький</option>
+                                                                <option title="через проект" value="1.00" selected>Середній</option>
+                                                                <option title="через програму" value="1.07">Високий</option>
+                                                                <option title="через продуктову лінію" value="1.15">Дуже високий</option>
+                                                                <option title="через декілька продуктових ліній" value="1.24">Екстра високий</option>                                    
                                                              </select>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="producto__opt">
-                                                        <p>Відповідність документації потребам життєвого циклу</p>
+                                                        <p>Придатність документації потребам життєвого циклу</p>
                                                         <select id="doc">
                                                             <option value="0.81">Дуже низький</option>
                                                             <option value="0.91">Низький</option>
@@ -243,6 +283,7 @@
                                                             <option value="1.11">Високий</option>
                                                             <option value="1.23">Дуже високий</option>
                                                         </select>
+                                                        <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; right:241px; top: 203px;"  onclick="winOpen();"> ? </a></p>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -258,10 +299,10 @@
                                         <div class="producto__opt">
                                             <p>Обмеження часу виконання</p>
                                             <select id="rte">
-                                                <option value="1.00" selected>Середній</option>
-                                                <option value="1.11">Високий</option>
-                                                <option value="1.29">Дуже високий</option>
-                                                <option value="1.63">Екстра високий</option>
+                                                <option title="50% використання наявного часу виконання" value="1.00" selected>Середній</option>
+                                                <option title="70%" value="1.11">Високий</option>
+                                                <option title="85%" value="1.29">Дуже високий</option>
+                                                <option title="95%" value="1.63">Екстра високий</option>
                                             </select>
                                         </div>
                                     </td>
@@ -269,10 +310,10 @@
                                         <div class="producto__opt">
                                             <p>Обмеження пам'яті</p>
                                             <select id="rmp">
-                                                <option value="1.00" selected>Середній</option>
-                                                <option value="1.05">Високий</option>
-                                                <option value="1.17">Дуже високий</option>
-                                                <option value="1.46">Екстра високий</option>
+                                                <option title="50% використання наявного сховища" value="1.00" selected>Середній</option>
+                                                <option title="70%" value="1.05">Високий</option>
+                                                <option title="85%" value="1.17">Дуже високий</option>
+                                                <option title="95%" value="1.46">Екстра високий</option>
                                             </select>
                                         </div>
                                     </td>
@@ -285,6 +326,7 @@
                                                 <option value="1.15">Високий</option>
                                                 <option value="1.30">Дуже високий</option>
                                             </select>
+                                            <a class="btn button-custom btn-custom-two" style="position: absolute; padding: 6px; right: -8px; top: 76px;"  onclick="winOpen();"> ? </a></p>
                                         </div>
                                     </td>
                                 </tr>
@@ -312,11 +354,11 @@
                                     <div class="producto__opt">
                                         <p>Досвід розробки додатків</p>
                                         <select id="eapl">
-                                            <option value="1.22">Дуже низький</option>
-                                            <option value="1.10">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.88">Високий</option>
-                                            <option value="0.81">Дуже високий</option>
+                                            <option title="2 місяці" value="1.22">Дуже низький</option>
+                                            <option title="6 місяців" value="1.10">Низький</option>
+                                            <option title="1 рік" value="1.00" selected>Середній</option>
+                                            <option title="3 роки" value="0.88">Високий</option>
+                                            <option title="6 років" value="0.81">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -326,11 +368,11 @@
                                     <div class="producto__opt">
                                         <p>Можливості програміста</p>
                                         <select id="cpro">
-                                            <option value="1.34">Дуже низький</option>
-                                            <option value="1.15">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.88">Високий</option>
-                                            <option value="0.76">Дуже високий</option>
+                                            <option title="Вміння, ефективність, ретельність команди = 15%" value="1.34">Дуже низький</option>
+                                            <option title="Вміння, ефективність, ретельність команди = 35%" value="1.15">Низький</option>
+                                            <option title="Вміння, ефективність, ретельність команди = 55%" value="1.00" selected>Середній</option>
+                                            <option title="Вміння, ефективність, ретельність команди = 75%" value="0.88">Високий</option>
+                                            <option title="Вміння, ефективність, ретельність команди = 95%" value="0.76">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -338,11 +380,11 @@
                                     <div class="producto__opt">
                                         <p>Тривалість роботи персоналу</p>
                                         <select id="cper">
-                                            <option value="1.29">Дуже низький</option>
-                                            <option value="1.12">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.90">Високий</option>
-                                            <option value="0.81">Дуже високий</option>
+                                            <option title="Обіг персоналу на рік 48%" value="1.29">Дуже низький</option>
+                                            <option title="Обіг персоналу на рік 24%" value="1.12">Низький</option>
+                                            <option title="Обіг персоналу на рік 12%" value="1.00" selected>Середній</option>
+                                            <option title="Обіг персоналу на рік 6%" value="0.90">Високий</option>
+                                            <option title="Обіг персоналу на рік 3%" value="0.81">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -350,11 +392,11 @@
                                     <div class="producto__opt">
                                         <p>Досвід роботи з платформою</p>
                                         <select id="epla">
-                                            <option value="1.19">Дуже низький</option>
-                                            <option value="1.09">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.91">Високий</option>
-                                            <option value="0.85">Дуже високий</option>
+                                            <option title="2 місяці" value="1.19">Дуже низький</option>
+                                            <option title="6 місяців" value="1.09">Низький</option>
+                                            <option title="1 рік" value="1.00" selected>Середній</option>
+                                            <option title="3 роки" value="0.91">Високий</option>
+                                            <option title="6 років" value="0.85">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -362,11 +404,11 @@
                                     <div class="producto__opt">
                                         <p>Досвід викорисання мови програмування та інструментальних засобів</p>
                                         <select id="elp">
-                                            <option value="1.20">Дуже низький</option>
-                                            <option value="1.09">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.91">Високий</option>
-                                            <option value="0.84">Дуже високий</option>
+                                            <option title="2 місяці" value="1.20">Дуже низький</option>
+                                            <option title="6 місяців" value="1.09">Низький</option>
+                                            <option title="1 рік" value="1.00" selected>Середній</option>
+                                            <option title="3 роки" value="0.91">Високий</option>
+                                            <option title="6 років" value="0.84">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -383,23 +425,23 @@
                                     <div class="producto__opt">
                                         <p>Використання інструментальних програмних засобів</p>
                                         <select id="uhs">
-                                            <option value="1.17">Дуже низький</option>
-                                            <option value="1.09">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.90">Високий</option>
-                                            <option value="0.78">Дуже високий</option>
+                                            <option title="Редагувати, кодувати" value="1.17">Дуже низький</option>
+                                            <option title="Просте налагодження, frontend, backend, маленька інтеграція" value="1.09">Низький</option>
+                                            <option title="Базові інструменти життєвого циклу, помірно інтегровані" value="1.00" selected>Середній</option>
+                                            <option title="Сильні, зрілі інструменти життєвого циклу, помірно інтегровані" value="0.90">Високий</option>
+                                            <option title="Сильні, зрілі, проактивні інструменти життєвого циклу, добре інтегровані з процесами, методами, повторним використанням" value="0.78">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="producto__opt">
-                                        <p>Необхідне виконання графіку робіт</p>
+                                        <p>Дотримання виконання графіку робіт</p>
                                         <select id="rpl">
-                                            <option value="1.43">Дуже низький</option>
-                                            <option value="1.09">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="1.00">Високий</option>
-                                            <option value="1.00">Дуже високий</option>
+                                            <option title="75% від номінального графіку" value="1.43">Дуже низький</option>
+                                            <option title="85%" value="1.09">Низький</option>
+                                            <option title="100%" value="1.00" selected>Середній</option>
+                                            <option title="130%" value="1.00">Високий</option>
+                                            <option title="160%" value="1.00">Дуже високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -407,12 +449,12 @@
                                     <div class="producto__opt">
                                         <p>Багатоабонентська (віддалена) розробка</p>
                                         <select id="dms">
-                                            <option value="1.22">Дуже низький</option>
-                                            <option value="1.09">Низький</option>
-                                            <option value="1.00" selected>Середній</option>
-                                            <option value="0.93">Високий</option>
-                                            <option value="0.86">Дуже високий</option>
-                                            <option value="0.80">Екстра високий</option>
+                                            <option title="Деякі телефони, пошта" value="1.22">Дуже низький</option>
+                                            <option title="Індивідуальний телефон, факс" value="1.09">Низький</option>
+                                            <option title="Вузько-смугова електрона пошта" value="1.00" selected>Середній</option>
+                                            <option title="Широкосмуговий електронний зв'язок" value="0.93">Високий</option>
+                                            <option title="Широкосмуговий електронний зв'язок, іноді відео конференція" value="0.86">Дуже високий</option>
+                                            <option title="Інтерактивні мультимедіа" value="0.80">Екстра високий</option>
                                         </select>
                                     </div>
                                 </td>
@@ -489,5 +531,8 @@
          <script src="assets/js/custom.js"></script>
         <script src="assets/js/script-cocomo2.js"></script>
         <!------------------------------------------>
+          <script src="assets/js/expert.js"></script>
+           <script src="assets/js/sizeDB.js"></script>
+          <script src="assets/js/jquery-migrate.min.js"></script>
     </body>
 </html>
